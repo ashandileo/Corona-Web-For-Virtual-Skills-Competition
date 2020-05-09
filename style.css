@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 15px;
+    line-height: 1.4;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.loading-inner {
+    position: absolute;
+    z-index: 12;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background: #eee;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 1s;
+}
+
+.loading-inner .loading {
+    width: 50px;
+    height: 50px;
+    background: #F4956A;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    animation: scale 0.8s infinite;
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(5);
+    }
+}
+
+/* Header */
+.main-nav {
+    padding: 20px 0;
+    position: fixed;
+    background: white;
+    width: 100%;
+}
+
+/* Hero */
+.hero {
+    width: 100%;
+    height: 565px;
+    background: url(./Images/Image\ 1.png) no-repeat 100% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero p {
+    margin-top: 8px;
+    margin-bottom: 32px;
+    color: #707070;
+    font-size: 20px;
+}
+
+.btn {
+    background: #F4956A;
+    text-transform: uppercase;
+    width: 30%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 16px 32px;
+    font-size: 15px;
+    transition: .4s;
+}
+
+.btn:hover {
+    opacity: 0.3;
+}
+
+.cuci-tangan {
+    background: #7CD3F1;
+    text-align: center;
+    padding: 70px 0;
+    /* animation: changeColour 4s infinite;
+    animation-direction: 'initial'; */
+}
+
+/* @keyframes changeColour {
+    from {
+        background: #7CD3F1;
+    }
+    to {
+        background: #F4956A;
+    }
+} */
+
+.cuci-tangan .content img {
+    transform: rotate(0);
+    transition: transform .5s;
+}
+
+.cuci-tangan .content img:hover{
+    transform: rotate(360deg);
+}
+
+.title {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.title span {
+    font-size: 15px;
+}
+
+.title h2 {
+    font-size: 40px;
+}
+
+.cuci-tangan .content {
+    padding: 30px 0;
+}
+
+.cuci-tangan .content div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.cuci-tangan .content img,
+.cuci-tangan .content p {
+    margin-right: 35px;
+}
+
+/* Gejala */
+.gejala {
+    padding: 70px 0;
+    background: #EFEFEF;
+}
+
+.gejala .title {
+    color: #707070;
+}
+
+.gejala .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gejala .content div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.gejala .content p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.gejala .content img {
+    transform: rotate(0);
+    transition: transform .5s;
+}
+
+.gejala .content img:hover{
+    transform: rotate(360deg);
+}
+
+footer {
+    padding: 2em 0;
+    background: #333333;
+    text-align: center;
+}
+
+footer img {
+    width: 20%;
+}
+
+@media (max-width: 922px) {
+    .hero {
+        background: none;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 778px) {
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .title h2 {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .gejala .content {
+        grid-template-columns: 1fr;
+    }
+
+    .cuci-tangan .content img,
+    .cuci-tangan .content p {
+        margin-right: 0;
+    }
+
+    footer img {
+        width: 50%;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
